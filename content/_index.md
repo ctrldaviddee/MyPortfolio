@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ""
-date: 2022-10-24
+title: "Housna Alida Eden"
+date: 2025-05-07
 type: landing
 
 design:
