@@ -161,7 +161,7 @@ const translations = {
             bac: {
                 title: "High School Diploma",
                 school: "UAC/ Office of the Baccalaureate",
-                dateSerie1: "Juune 2024",
+                dateSerie1: "June 2024",
                 series2: "Baccalauréat Série D",
                 dateSerie2: "June 2021"
             },
