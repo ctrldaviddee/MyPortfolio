@@ -1,0 +1,116 @@
+/* Animation styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-item, .skills-category, .contact-item, .contact-form {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.timeline-item.animate, .skills-category.animate, .contact-item.animate, .contact-form.animate {
+    opacity: 1;
+}
+
+.timeline-item:nth-child(odd).animate {
+    animation: slideInLeft 0.8s forwards;
+}
+
+.timeline-item:nth-child(even).animate {
+    animation: slideInRight 0.8s forwards;
+}
+
+.skills-category.animate {
+    animation: fadeIn 0.8s forwards;
+}
+
+.contact-item.animate, .contact-form.animate {
+    animation: fadeIn 0.8s forwards;
+}
+
+/* Burger menu animation */
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hover effects */
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.info-item:hover, .timeline-content:hover, .skills-category:hover, .contact-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Pulse animation for download button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.secondary-btn {
+    animation: pulse 2s infinite;
+}
+
+.secondary-btn:hover {
+    animation: none;
+}
